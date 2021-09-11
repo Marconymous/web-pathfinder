@@ -1,0 +1,41 @@
+.flex {
+  display: flex !important;
+
+  &-center {
+    justify-content: center;
+  }
+}
+
+.grid {
+  &-cell {
+    width: 20px;
+    height: 20px;
+    border: black solid 1px;
+    animation: ease-in-out remove-wall 0.3s;
+
+    &-wall {
+      animation: ease-in-out fill-wall 0.3s;
+      background: #dc3545;
+    }
+  }
+}
+
+@keyframes fill-wall {
+  from {
+    background: none;
+  }
+
+  to {
+    background: #dc3545;
+  }
+}
+
+@keyframes remove-wall {
+  from {
+    background: #dc3545;
+  }
+
+  to {
+    background: none;
+  }
+}
